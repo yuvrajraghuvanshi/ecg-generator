@@ -1,3 +1,5 @@
+### ECG Generator
+
 # Install Dependencies
 
 ```npm install```
