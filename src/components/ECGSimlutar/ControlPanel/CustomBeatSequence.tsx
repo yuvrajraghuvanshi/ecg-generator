@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomBeatItem from './CustomBeatItem';
-import { CustomBeat } from '../../../types/types';
+import type { CustomBeat } from '../../../types/types';
 import InputField from './InputField';
 
 interface CustomBeatSequenceProps {

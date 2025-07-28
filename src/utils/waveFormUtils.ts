@@ -1,4 +1,4 @@
-import { Point, WaveParams, CustomBeat } from '../types/types';
+import type { Point, WaveParams, CustomBeat } from '../types/types';
 
 export const raisedCosinePulse = (t: number, h: number, b: number, t0: number): number => {
   if (b === 0 || t < t0 || t > t0 + b) return 0;
@@ -189,7 +189,7 @@ export const generateWaveformPoints = (
   return pts;
 };
 
-export const drawGrid = (svgRef: React.RefObject<SVGSVGElement>, SVG_WIDTH: number, SVG_HEIGHT: number) => {
+export const drawGrid = (svgRef: React.RefObject<SVGSVGElement | null>, SVG_WIDTH: number, SVG_HEIGHT: number) => {
   if (!svgRef.current) return;
 
   const existingGrid = svgRef.current.querySelector('.grid-group');
@@ -228,7 +228,7 @@ export const drawGrid = (svgRef: React.RefObject<SVGSVGElement>, SVG_WIDTH: numb
 };
 
 export const initializeSVG = (
-  svgRef: React.RefObject<SVGSVGElement>,
+  svgRef: React.RefObject<SVGSVGElement | null>,
   SVG_WIDTH: number,
   SVG_HEIGHT: number,
   POINTER_RADIUS: number

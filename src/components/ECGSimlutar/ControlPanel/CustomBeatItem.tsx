@@ -1,5 +1,5 @@
 import React from 'react';
-import { CustomBeat } from '../../../types/types';
+import type { CustomBeat } from '../../../types/types';
 
 interface CustomBeatItemProps {
   beat: CustomBeat;

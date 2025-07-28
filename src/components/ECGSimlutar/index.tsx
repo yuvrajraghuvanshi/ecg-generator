@@ -1,18 +1,16 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import ControlPanel from './ControlPanel';
 import ECGDisplay from './ECGDisplay';
-import { WaveParams, CustomBeat, Point } from '../../types/types';
+import type { WaveParams, CustomBeat, Point } from '../../types/types';
 import { 
-  raisedCosinePulse, 
   generateWaveformPoints, 
-  drawGrid, 
   initializeSVG, 
   pointsToPath 
 } from '../../utils/waveFormUtils';
 
 const ECGSimulator: React.FC = () => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number>(0);
   const lastTimestampRef = useRef<number>(0);
   const pointerXRef = useRef<number>(0);
   const firstSweepRef = useRef<boolean>(true);

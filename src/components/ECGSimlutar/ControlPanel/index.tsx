@@ -3,7 +3,7 @@ import BasicParameters from './BasicParameters';
 import WaveParameters from './WaveParameters';
 import DynamicPattern from './DynamicPattern';
 import CustomBeatSequence from './CustomBeatSequence';
-import { WaveParams, CustomBeat } from '../../../types/types';
+import type { WaveParams, CustomBeat } from '../../../types/types';
 
 interface ControlPanelProps {
   waveParams: WaveParams;

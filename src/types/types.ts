@@ -1,4 +1,4 @@
-// components/ECGSimulator/types.ts
+
 export interface WaveParams {
   heart_rate: number;
   h_p: number;

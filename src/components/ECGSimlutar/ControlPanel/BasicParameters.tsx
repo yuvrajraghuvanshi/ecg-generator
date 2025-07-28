@@ -1,6 +1,6 @@
 import React from 'react';
 import InputField from './InputField';
-import { WaveParams } from '../../../types/types';
+import type { WaveParams } from '../../../types/types';
 
 interface BasicParametersProps {
   waveParams: WaveParams;

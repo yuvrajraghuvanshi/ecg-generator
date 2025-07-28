@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ECGDisplayProps {
-  svgRef: React.RefObject<SVGSVGElement>;
+  svgRef: React.RefObject<SVGSVGElement | null>;
 }
 
 const ECGDisplay: React.FC<ECGDisplayProps> = ({ svgRef }) => {
